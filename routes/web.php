@@ -16,11 +16,10 @@ use App\Controllers\Maincontroller;
 
 Route::get('/', 'Maincontroller@index');
 
-
-// Route::get('/setlocale/{locale}', function ($locale) {
-//     session(['locale' => $locale]);
-//     return redirect()->back();
-// });
+Route::get('/setlocale/{locale}', function ($locale) {
+    session(['locale' => $locale]);
+    return redirect()->back();
+});
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();

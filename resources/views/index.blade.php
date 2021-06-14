@@ -47,10 +47,9 @@
 <section class="intro">
     <div class="intro__wrapper container">
         <div class="intro_inner">
-            <div class="intro_text">Bаш надежный партнер <br/><span>в мире инвестиций,</span> <br/> консалтинга, продаж
-                и <br/> дистрибуции
+            <div class="intro_text">{{  __('content.banner')  }}
             </div>
-            <button class="ab_button shine" style="font-weight: bold">Подробнее</button>
+            <button class="ab_button shine" style="font-weight: bold">{{  __('content.button')  }}</button>
         </div>
     </div>
 
@@ -59,7 +58,7 @@
 <section class="ab_us_section" data-aos="fade-up">
     <div class="ab_us container">
         <div class="ab_us_left">
-            <div class="ab_us_title">Немного о нас
+            <div class="ab_us_title">{{  __('content.about')  }}
                 <div class="line"></div>
             </div>
             <div class="ab_us_paragraph">{{$about->title}}</div>
@@ -75,7 +74,7 @@
                     {!!$about->description_bottom!!}  
             </div>
             <div class="ab_us_button_wrap">
-                <button class="ab_button shine">Подробнее</button>
+                <button class="ab_button shine">{{  __('content.button')  }}</button>
             </div>
 
         </div>
@@ -100,7 +99,7 @@
 <section class="section_services" data-aos="fade-zoom-in">
     <div class="container">
         <div class="services">
-            <h1 class="section__title">Наши услуги</h1>
+            <h1 class="section__title">{{  __('content.services')  }}</h1>
             <div class="services__wrapper">
                 @foreach ($services as $service)
                 <div class="services__item">
@@ -112,7 +111,7 @@
                     </div>
                     <div class="services__text">{{$service->description}}</div>
                         <div class="services__btn-block">
-                            <a href="#" class="services__btn shine">Подробнее</a>
+                            <a href="#" class="services__btn shine">{{  __('content.button')  }}</a>
                         </div>
                     </div>
                     @endforeach
@@ -122,21 +121,21 @@
 </section>
 
 <section class="buyings" data-aos="fade-up" style="margin-bottom: 20px">
-    <div class="buyings_title">Закупки</div>
+    <div class="buyings_title">{{  __('content.procurement')  }}</div>
     <div class="block_wrap container">
         @foreach ($procurements as $procurement)
         <div class="block buy_block">
             <div class="buy_title">{{$procurement->date}}</div>
             <div class="buy_text">{{$procurement->description}}</div>
             <div class="buy_about_wrap">
-                <a class="buy_about" href="#">Подробнее <img src="assets/arrow_right.png" alt=""></a>
+                <a class="buy_about" href="#">{{  __('content.button')  }}<img src="assets/arrow_right.png" alt=""></a>
             </div>
         </div>
         @endforeach
     </div>
 </section>
 <section class="news" data-aos="zoom-in">
-    <div class="news_title">Новости</div>
+    <div class="news_title">{{  __('content.articles')  }}</div>
     <div class="news_wrap container">
         @foreach ($articles as $article)   
         <div class="news_item">
@@ -153,7 +152,7 @@
             </div>
 
                 <div class="news__btn-wrap">
-                    <a href="#" class="ab_button shine" style="margin-top:0; padding: 16px 32px">Подробнее</a>
+                    <a href="#" class="ab_button shine" style="margin-top:0; padding: 16px 32px">{{  __('content.buttons')  }}</a>
                 </div>
         </div>
         @endforeach
@@ -170,27 +169,27 @@
             <div class="footer_link_block">
                 <div class="footer_link_item" style="cursor:pointer" onclick="document.querySelector('.ab_us_section').scrollIntoView({
   behavior: 'smooth'
-});">О компании</div>
+});">{{  __('content.company')  }}</div>
                 <div class="footer_link_item"
                 style="cursor:pointer" onclick="document.querySelector('.section_services').scrollIntoView({
   behavior: 'smooth'
-});">Услуги</div>
+});">{{  __('content.services')  }}</div>
                 <div class="footer_link_item" style="cursor:pointer" onclick="document.querySelector('.buyings').scrollIntoView({
   behavior: 'smooth'
-});">Закупки</div>
+});">{{  __('content.procurement')  }}</div>
             </div>
         </div>
         <div class="footer_link">
             <div class="footer_link_block">
                 <div class="footer_link_item" style="cursor:pointer" onclick="document.querySelector('.news').scrollIntoView({
   behavior: 'smooth'
-});">Новости</div>
+});">{{  __('content.articles')  }}</div>
                 <div class="footer_link_item" style="cursor:pointer" onclick="document.querySelector('.news').scrollIntoView({
   behavior: 'smooth'
-});">Статьи</div>
+});">{{  __('content.paper')  }}</div>
                 <div class="footer_link_item" style="cursor:pointer" onclick="document.querySelector('.ab_us_section').scrollIntoView({
   behavior: 'smooth'
-});">Контакты</div>
+});">{{  __('content.contact')  }}</div>
             </div>
         </div>
         <div class="footer_info_block">
@@ -212,10 +211,10 @@
         </div>
         <div class="footer_info third">
             <img src="assets/footer_icons/address_icon.png" alt="">
-            <div class="footer_info_text">{{setting('kontakty.address')}}</div>
+            <div class="footer_info_text">{{  __('content.adress')  }}</div>
         </div>
         <div class="social_media">
-            <div class="social_media_title">Мы в соцсетях</div>
+            <div class="social_media_title">{{  __('content.social')  }}</div>
             <img class="social_media_icon" src="assets/footer_icons/fb_icon.png" alt="">
             <img class="social_media_icon" src="assets/footer_icons/insta_icon.png" alt="">
             <img class="social_media_icon" src="assets/footer_icons/linked_in_icon.png" alt="">

@@ -11,5 +11,5 @@ class About extends Model
 {
     use HasFactory, Translatable;
 
-    protected $translatable = ['description','title'];
+    protected $translatable = ['description_top','description_bottom','title'];
 }
