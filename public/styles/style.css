@@ -534,7 +534,6 @@ li::marker {
 
 .social_media {
     margin-top: 50px;
-    margin-right: 20px;
 }
 
 .third {
@@ -550,8 +549,11 @@ li::marker {
     text-align: center;
 }
 
+.icons {
+    display: flex;
+    justify-content: space-between;
+}
 .social_media_icon {
-    margin-right: 10px;
 }
 
 .footer_link_item {
@@ -618,9 +620,11 @@ li::marker {
         display: none;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
         height: auto;
         -webkit-transition: 1s;
         transition: 1s;
+        text-transform: uppercase;
     }
 
     .mobile-nav-link {
@@ -756,7 +760,7 @@ li::marker {
 
     .social_media {
         color: black;
-        margin-right: 0;
+        margin-right: 0 !important;
     }
 
     .social_media_title {
@@ -770,4 +774,41 @@ li::marker {
 
 @media screen and (max-width: 375px) {
 
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 5px 15px;
+    z-index: 1;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .lang {
+      margin-left: 10px;
+      color:#8B939C;
+  }
+  .lang span {
+    color:#8B939C;
+    font-weight: 400;
+}
+
+.lang img {
+    margin-bottom: 3px;
+}
+
+.lang a {
+    color:#8B939C;
+
+    text-decoration: none;
 }

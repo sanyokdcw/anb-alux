@@ -15,7 +15,12 @@ class Maincontroller extends Controller
 {
     public function index(){
         $locale = session('locale');
-        App::setLocale($locale);
+        if($locale == null) {
+            App::setLocale('ru');
+        }
+        else {
+            App::setLocale($locale);
+        }
 
         $about = About::first()->translate($locale, 'ru');
         $badges = Badge::all()->translate($locale, 'ru');

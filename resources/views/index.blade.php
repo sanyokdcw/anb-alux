@@ -15,16 +15,49 @@
         <div class="inner_container">
             <img class="logo" src="assets/Logo.png" alt="">
             <nav class="nav">
-                <div class="nav_link" style="cursor:pointer" onclick="scrollDCW('.ab_us_section')"><span>О</span> нас <img src="/assets/vline.png" alt=""></div>
-                <div class="nav_link" style="cursor:pointer" onclick="scrollDCW('.section_services')">Услуги</div>
-                <div class="nav_link" style="cursor:pointer" onclick="scrollDCW('.buyings')">Закупки</div>
-                <div class="nav_link" style="cursor:pointer" onclick="scrollDCW('.news')">Новости</div>
-                <div class="nav_link" style="cursor:pointer" onclick="scrollDCW('.news')">Статьи</div>
+                <div class="nav_link" style="cursor:pointer;" onclick="scrollDCW('.ab_us_section')">
+                    @if(session('locale') == 'ru')
+                        <span>О</span> нас <img src="/assets/vline.png" alt="">
+                    @else 
+                        Компания <span> жайлы </span> <img src="/assets/vline.png" alt="">
+                    @endif
+                </div>
+                <div class="nav_link" style="cursor:pointer" onclick="scrollDCW('.section_services')">{{  __('content.services')  }}</div>
+                <div class="nav_link" style="cursor:pointer" onclick="scrollDCW('.buyings')">{{  __('content.procurement')  }}</div>
+                <div class="nav_link" style="cursor:pointer" onclick="scrollDCW('.news')">{{  __('content.articles')  }}</div>
+                <div class="nav_link" style="cursor:pointer" onclick="scrollDCW('.news')">{{  __('content.paper')  }}</div>
             </nav>
             <div class="number">
             <a href="tel:{{setting('kontakty.telephone')}}" style="text-decoration:none; color: black">
              {{setting('kontakty.telephone')}}
             </a>
+            <div class="lang dropdown">
+                @if(session('locale') == 'ru')
+                <span>
+                    Ru 
+                    <img src="/assets/arrow.png" alt="">
+                </span>
+                <div class="dropdown-content">
+                  <p>
+                      <a href="/setlocale/kz">
+                        Kz
+                    </a>
+                </p>
+                </div>
+                @else 
+                <span>
+                    Kz 
+                    <img src="/assets/arrow.png" alt="">
+                </span>
+                <div class="dropdown-content">
+                  <p>
+                      <a href="/setlocale/ru">
+                        Ru
+                    </a>
+                </p>
+                </div>
+                @endif
+            </div>
             </div>
         </div>
     </div>
@@ -36,19 +69,31 @@
         <img class="burger" src="/assets/menu.png" alt="" onclick="showBurger()">
     </div>
     <div class="mobile-nav" id="menu">
-        <div class="mobile-nav-link" style="cursor:pointer" onclick="scrollDCW('.ab_us_section')"><span>О</span> нас <img src="/assets/vline.png" alt=""></div>
-        <div class="mobile-nav-link" style="cursor:pointer" onclick="scrollDCW('.section_services')">Услуги</div>
-        <div class="mobile-nav-link" style="cursor:pointer" onclick="scrollDCW('.buyings')">Закупки</div>
-        <div class="mobile-nav-link" style="cursor:pointer" onclick="scrollDCW('.news')">Новости</div>
-        <div class="mobile-nav-link" style="cursor:pointer" onclick="scrollDCW('.news')">Статьи</div>
+        <div class="mobile-nav-link" style="cursor:pointer" onclick="scrollDCW('.ab_us_section')">                    @if(session('locale') == 'ru')
+            <span>О</span> нас <img src="/assets/vline.png" alt="">
+        @else 
+            Компания <span> жайлы </span> <img src="/assets/vline.png" alt="">
+        @endif</div>
+        <div class="mobile-nav-link" style="cursor:pointer" onclick="scrollDCW('.section_services')">{{  __('content.services')  }}</div>
+        <div class="mobile-nav-link" style="cursor:pointer" onclick="scrollDCW('.buyings')">{{  __('content.procurement')  }}</div>
+        <div class="mobile-nav-link" style="cursor:pointer" onclick="scrollDCW('.news')">{{  __('content.articles')  }}</div>
+        <div class="mobile-nav-link" style="cursor:pointer" onclick="scrollDCW('.news')">{{  __('content.paper')  }}</div>
     </div>
 </header>
 
 <section class="intro">
     <div class="intro__wrapper container">
         <div class="intro_inner">
-            <div class="intro_text">{{  __('content.banner')  }}
+            @if(session('locale') == 'ru')
+            <div class="intro_text">
+                Bаш надежный партнер <br/><span>в мире инвестиций,</span> <br/> консалтинга, продаж
+                и <br/> дистрибуции
             </div>
+            @else
+            <div class="intro_text" style="font-size: 28px">
+                <span>ИНВЕСТИЦИЯ </span>, КОНСАЛТИНГ, <br> САТУ ЖӘНЕ ДИСТРИБУЦИЯ <br> ӘЛЕМІНДЕГІ СIЗДІҢ <br> СЕНІМДІ СЕРІКТЕСІҢІЗ
+            </div>
+            @endif
             <button class="ab_button shine" style="font-weight: bold">{{  __('content.button')  }}</button>
         </div>
     </div>
@@ -215,9 +260,11 @@
         </div>
         <div class="social_media">
             <div class="social_media_title">{{  __('content.social')  }}</div>
-            <img class="social_media_icon" src="assets/footer_icons/fb_icon.png" alt="">
-            <img class="social_media_icon" src="assets/footer_icons/insta_icon.png" alt="">
-            <img class="social_media_icon" src="assets/footer_icons/linked_in_icon.png" alt="">
+            <div class="icons">
+                <img class="social_media_icon" src="assets/footer_icons/fb_icon.png" alt="">
+                <img class="social_media_icon" src="assets/footer_icons/insta_icon.png" alt="">
+                <img class="social_media_icon" src="assets/footer_icons/linked_in_icon.png" alt="">
+            </div>
         </div>
     </div>
 
