@@ -30,6 +30,9 @@ a {
 
 }
 
+.mobile-header {
+    display:none;
+}
 
 /**
  * The "shine" element
@@ -596,9 +599,46 @@ li::marker {
 }
 
 @media (max-width: 768px) {
+
+    .mobile-header {
+        display: block;
+        position: fixed;
+        width: 100%;
+        z-index: 1;
+        background-color: #f1f3f6;
+    }
+
+    .mobile-header__wrapper {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+    }
+
+    .mobile-nav {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        -webkit-transition: 1s;
+        transition: 1s;
+    }
+
+    .mobile-nav-link {
+        font-size: 18px;
+        padding: 10px 0;
+    }
+
+    .burger {
+        padding-right: 10px;
+    }
+
     .nav {
         display: flex;
         flex-wrap: wrap;
+    }
+
+    .header {
+        display: none;
     }
 
     .nav_link {

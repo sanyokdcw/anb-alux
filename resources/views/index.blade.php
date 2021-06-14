@@ -15,29 +15,32 @@
         <div class="inner_container">
             <img class="logo" src="assets/Logo.png" alt="">
             <nav class="nav">
-                <div class="nav_link" style="cursor:pointer" onclick="document.querySelector('.ab_us_section').scrollIntoView({
-  behavior: 'smooth'
-});"><span>О</span> нас <img src="/assets/vline.png" alt=""></div>
-                <div class="nav_link" style="cursor:pointer" onclick="document.querySelector('.section_services').scrollIntoView({
-  behavior: 'smooth'
-});">Услуги</div>
-                <div class="nav_link" style="cursor:pointer" onclick="document.querySelector('.buyings').scrollIntoView({
-  behavior: 'smooth'
-});">Закупки</div>
-                <div class="nav_link" style="cursor:pointer" onclick="document.querySelector('.news').scrollIntoView({
-  behavior: 'smooth'
-});">Новости</div>
-                <div class="nav_link" style="cursor:pointer" onclick="document.querySelector('.news').scrollIntoView({
-  behavior: 'smooth'
-});">Статьи</div>
+                <div class="nav_link" style="cursor:pointer" onclick="scrollDCW('.ab_us_section')"><span>О</span> нас <img src="/assets/vline.png" alt=""></div>
+                <div class="nav_link" style="cursor:pointer" onclick="scrollDCW('.section_services')">Услуги</div>
+                <div class="nav_link" style="cursor:pointer" onclick="scrollDCW('.buyings')">Закупки</div>
+                <div class="nav_link" style="cursor:pointer" onclick="scrollDCW('.news')">Новости</div>
+                <div class="nav_link" style="cursor:pointer" onclick="scrollDCW('.news')">Статьи</div>
             </nav>
             <div class="number">
-             <a href="tel:{{setting('kontakty.telephone')}}" style="text-decoration:none; color: black">
+            <a href="tel:{{setting('kontakty.telephone')}}" style="text-decoration:none; color: black">
              {{setting('kontakty.telephone')}}
-</a>
-            
+            </a>
             </div>
         </div>
+    </div>
+</header>
+
+<header class="mobile-header">
+    <div class="mobile-header__wrapper">
+        <img class="logo" src="assets/Logo.png" alt="">
+        <img class="burger" src="/assets/menu.png" alt="" onclick="showBurger()">
+    </div>
+    <div class="mobile-nav" id="menu">
+        <div class="mobile-nav-link" style="cursor:pointer" onclick="scrollDCW('.ab_us_section')"><span>О</span> нас <img src="/assets/vline.png" alt=""></div>
+        <div class="mobile-nav-link" style="cursor:pointer" onclick="scrollDCW('.section_services')">Услуги</div>
+        <div class="mobile-nav-link" style="cursor:pointer" onclick="scrollDCW('.buyings')">Закупки</div>
+        <div class="mobile-nav-link" style="cursor:pointer" onclick="scrollDCW('.news')">Новости</div>
+        <div class="mobile-nav-link" style="cursor:pointer" onclick="scrollDCW('.news')">Статьи</div>
     </div>
 </header>
 
@@ -222,11 +225,11 @@
 </footer>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <script>
-            AOS.init();
-        </script>
+<script>
+    AOS.init();
+</script>
 <script src="/js/jquery.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<script src="/js/slider.js"></script>
+<script src="/js/main.js"></script>
 </body>
 </html>

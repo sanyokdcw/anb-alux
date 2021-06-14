@@ -16,3 +16,20 @@ $(document).ready(function () {
         ]
     });
 });
+
+function showBurger() {
+    let menu = document.getElementById('menu')
+    if (menu.style.display === "flex") {
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "flex";
+    }
+}
+
+function scrollDCW(block) {
+    document.getElementById('menu').style.display = "none";
+
+    document.querySelector(block).scrollIntoView({
+        behavior: 'smooth'
+    });
+}
