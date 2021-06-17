@@ -130,8 +130,8 @@
     </header>
 
     <section class="intro">
-        <div class="intro__wrapper ">
-            <div class="intro_inner">
+        <div class="intro__wrapper container">
+            <div class="intro_inner" style="width:100%">
                 @if(session('locale') == 'ru')
                 <div class="intro_text">
                     Bаш надежный партнер <br /><span>в мире инвестиций,</span> <br /> консалтинга, продаж
@@ -147,7 +147,7 @@
             </div>
             
             <div class="intro_inner">
-               <div id="map_anb" style="width:70%"></div>
+               <div id="map_anb" style="width:120%; margin-left: -5%"></div>
             </div>
         </div>
 
@@ -295,7 +295,7 @@
                 <div class="footer_info">
                     <img src="assets/footer_icons/phone_icon.png" alt="">
                     <div class="footer_info_text"> <a href="tel:{{setting('kontakty.telephone')}}"
-                            style="text-decoration:none; color: black">
+                            style="text-decoration:none; color: black; font-size: 12px">
                             {{setting('kontakty.telephone')}}
                         </a></div>
                 </div>
@@ -303,7 +303,7 @@
                 <div class="footer_info">
                     <img src="assets/footer_icons/mail_icon.png" alt="">
                     <div class="footer_info_text">
-                        <a href="mailto:{{setting('kontakty.email')}}" style="text-decoration:none; color: black">
+                        <a href="mailto:{{setting('kontakty.email')}}" style="text-decoration:none; color: black; font-size: 12px;">
                             {{setting('kontakty.email')}}
                         </a>
                     </div>
@@ -313,11 +313,11 @@
                 <img src="assets/footer_icons/address_icon.png" alt="">
                 <div class="footer_info_text">{{  __('content.adress')  }}</div>
             </div>
-            <div class="social_media">
-                <div class="social_media_title">{{  __('content.social')  }}</div>
-                <div class="icons">
+            <div class="social_media" style="max-width:150px">
+                <div class="social_media_title" style="margin-bottom: 10px">{{  __('content.social')  }}</div>
+                <div class="icons" style="justify-content: center">
                     <img class="social_media_icon" src="assets/footer_icons/fb_icon.png" alt="">
-                    <img class="social_media_icon" src="assets/footer_icons/insta_icon.png" alt="">
+                    <img class="social_media_icon" style="    margin: 0 10px;" src="assets/footer_icons/insta_icon.png" alt="">
                     <img class="social_media_icon" src="assets/footer_icons/linked_in_icon.png" alt="">
                 </div>
             </div>

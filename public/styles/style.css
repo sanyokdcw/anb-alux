@@ -636,7 +636,16 @@ li::marker {
 }
 
 @media (max-width: 768px) {
-    .mobile-header {
+
+#map_anb {
+display:none;
+}
+
+
+.intro_inner:nth-last-child(1) {
+	display:none;
+}    
+.mobile-header {
         display: block;
         position: fixed;
         width: 100%;
@@ -692,7 +701,7 @@ li::marker {
     .intro_inner {
         width: 100%;
         text-align: center;
-        margin-top: 150px;
+        margin-top: 50px;
     }
     .intro_text {
         font-size: 20px !important;
@@ -765,7 +774,7 @@ li::marker {
     }
     .social_media {
         color: black;
-        margin-bottom: 20px;
+        margin-bottom: 60px;
         margin-right: 0 !important;
     }
     .icons {
