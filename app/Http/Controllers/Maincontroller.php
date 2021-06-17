@@ -14,13 +14,15 @@ use TCG\Voyager\Traits\Translatable;
 class Maincontroller extends Controller
 {
     public function index(){
+	if(session()->has('locale')) {
+
         $locale = session('locale');
-        if($locale == null) {
-            App::setLocale('ru');
-        }
-        else {
-            App::setLocale($locale);
-        }
+        App::setLocale($locale);
+}
+else {
+	$locale = session(['locale' => 'ru']);
+	App::setLocale('ru');
+}
 
         $about = About::first()->translate($locale, 'ru');
         $badges = Badge::all()->translate($locale, 'ru');
